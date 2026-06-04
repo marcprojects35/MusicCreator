@@ -1,0 +1,33 @@
+# ── Core API ──────────────────────────────────────────────────────────────────
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+websockets==12.0
+aiofiles==23.2.1
+
+# ── Audio Processing ──────────────────────────────────────────────────────────
+librosa==0.10.1
+soundfile==0.12.1
+noisereduce==3.0.0
+scipy==1.11.4
+numpy==1.26.2
+pydub==0.25.1
+
+# ── Loudness / Mastering ──────────────────────────────────────────────────────
+# Implements ITU-R BS.1770 for accurate LUFS measurement
+pyloudnorm>=0.1.1
+
+# ── Stem Separation (requires ~4GB disk, GPU recommended) ─────────────────────
+# pip install demucs torch torchaudio
+# demucs>=4.0.1
+# torch>=2.1.0
+# torchaudio>=2.1.0
+
+# ── Voice Clone (install manually — large models) ─────────────────────────────
+# pip install TTS resemblyzer
+# TTS>=0.22.0           # Coqui TTS (YourTTS multilingual, ~1.5GB download)
+# resemblyzer>=0.1.3    # Speaker embeddings for voice cloning
+
+# ── Optional: better pitch detection ──────────────────────────────────────────
+# crepe>=0.0.13         # Neural F0 estimation (more accurate autotune)
+# praat-parselmouth>=0.4.3
